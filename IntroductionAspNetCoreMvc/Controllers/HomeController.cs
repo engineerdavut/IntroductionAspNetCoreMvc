@@ -22,11 +22,15 @@ namespace IntroductionAspNetCoreMvc.Controllers
         {
             return View();
         }
-        public IActionResult Login()
+
+        public IActionResult Privacy()
         {
             return View();
         }
-        public IActionResult Privacy()
+
+        //http://localhost:57716/Home/Login/
+
+        public IActionResult Login()
         {
             return View();
         }

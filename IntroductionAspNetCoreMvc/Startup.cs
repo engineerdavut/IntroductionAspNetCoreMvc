@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 
 namespace IntroductionAspNetCoreMvc
 {
@@ -48,9 +49,37 @@ namespace IntroductionAspNetCoreMvc
 
             app.UseEndpoints(endpoints =>
             {
+                #region Default-1
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                            name: "default",
+                            pattern: "{controller=Home}/{action=Index}/{id?}");
+                #endregion
+
+                #region MapController Route - 1
+                //endpoints.MapControllerRoute(
+                //            name: "home",
+                //            pattern: "home/Index",
+                //            defaults: new { controller = "Home", action = "Index" }
+                //        ); 
+                #endregion
+
+                #region MapController Route-2
+                //endpoints.MapControllerRoute(
+                //            name: "Privacy",
+                //            pattern: "anasayfa/guvenlik",
+                //            defaults: new { controller = "Home", action = "Privacy" }
+                //        );
+
+                #endregion
+
+                #region MyController Route-3
+                //endpoints.MapControllerRoute(
+                //            name: "productlist",
+                //            pattern: "urun/list",
+                //            defaults: new { controller = "product", action = "list" }
+                //        ); 
+                #endregion
+
             });
         }
     }
